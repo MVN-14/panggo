@@ -10,20 +10,20 @@ type Args struct {
 	Size string
 }
 
-func Powerline(t, fg, bg string) string {
-	edge := Span("", Args{
+func Powerline(separator, text, fg, bg string) string {
+	edge := Span(separator, Args{
 		Fg:   bg,
-		Bg:   bg,
+		Bg:   fg,
 		Size: "15pt",
 	})
 
-	text := Span(t, Args{
+	content := Span(text, Args{
 		Bg:   bg,
 		Fg:   fg,
-		Size: "13pt",
+		Size: "14pt",
 	})
 
-	return edge + text
+	return edge + content
 }
 
 func Span(s string, a Args) string {
