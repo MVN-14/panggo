@@ -14,7 +14,7 @@ func Powerline(separator, text, fg, bg string, isFirst bool) string {
 	edgeBg := fg
 
 	if isFirst {
-		edgeBg = ""
+		edgeBg = "#FFFFFF"
 	}
 
 	edge := Span(separator, Args{
