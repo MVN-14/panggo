@@ -10,10 +10,16 @@ type Args struct {
 	Size string
 }
 
-func Powerline(separator, text, fg, bg string) string {
+func Powerline(separator, text, fg, bg string, isFirst bool) string {
+	edgeBg := fg
+
+	if isFirst {
+		edgeBg = ""
+	}
+
 	edge := Span(separator, Args{
 		Fg:   bg,
-		Bg:   fg,
+		Bg:   edgeBg,
 		Size: "15pt",
 	})
 
