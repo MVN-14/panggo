@@ -23,7 +23,7 @@ func Powerline(separator, text, fg, bg string, isFirst bool) string {
 		Size: "15pt",
 	})
 
-	content := Span(text+" ", Args{
+	content := Span(text, Args{
 		Bg:   bg,
 		Fg:   fg,
 		Size: "14pt",
