@@ -23,7 +23,7 @@ func Powerline(separator, text, fg, bg string, isFirst bool) string {
 		Size: "15pt",
 	})
 
-	content := Span(text, Args{
+	content := Span(text+"   ", Args{
 		Bg:   bg,
 		Fg:   fg,
 		Size: "14pt",
@@ -45,5 +45,5 @@ func Span(s string, a Args) string {
 		argString += fmt.Sprintf("size=\"%s\"", a.Size)
 	}
 
-	return fmt.Sprintf("<span %s>%s</span>", argString, s)
+	return fmt.Sprintf("<span %s> %s </span>", argString, s)
 }
